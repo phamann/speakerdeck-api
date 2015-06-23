@@ -1,0 +1,27 @@
+{
+  "name": "speakerdeck-api",
+  "version": "0.0.1",
+  "description": "Unofficial API to access speakerdeck.com user and talk data",
+  "main": "main.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phamann/speakerdeck-api.git"
+  },
+  "keywords": [
+    "speakerdeck",
+    "api"
+  ],
+  "author": "Patrick Hamann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phamann/speakerdeck-api/issues"
+  },
+  "homepage": "https://github.com/phamann/speakerdeck-api",
+  "dependencies": {
+    "express": "^4.13.0",
+    "speakerdeck-scraper": "^0.0.3"
+  }
+}
