@@ -1,6 +1,6 @@
 {
   "name": "speakerdeck-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Unofficial API to access speakerdeck.com user and talk data",
   "main": "main.js",
   "scripts": {
