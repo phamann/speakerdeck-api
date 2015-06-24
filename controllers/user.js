@@ -1,3 +1,39 @@
+/**
+ * @api {get} /:user Read data of a User
+ * @apiVersion 0.0.1
+ * @apiName GetUser
+ * @apiGroup User
+ *
+ * @apiDescription Get user data from speakerdeck.com
+ *
+ * @apiParam {String} user The Users ID.
+ * @apiParam {Number} [page] The page to query.
+ *
+ * @apiExample Example usage:
+ * curl -i http://speakerdeck-api.herokuapps.com/patrickhamann
+ *
+ * @apiSuccess {Object}   user          The User object.
+ * @apiSuccess {String}   user.data.id   The Users id.
+ * @apiSuccess {String}   user.data.name   The Users name.
+ * @apiSuccess {String}   user.data.bio    The Users bio.
+ * @apiSuccess {String}   user.data.avatar   The Users avatar.
+ * @apiSuccess {Number}   count         Count of Talks returned in current query.
+ * @apiSuccess {Object[]} talks         Array of Talks by the User.
+ * @apiSuccess {String}   talks.data.id     The id of the Talk.
+ * @apiSuccess {String}   talks.data.title  The title of the Talk.
+ * @apiSuccess {String}   talks.data.date   The date of the Talk.
+ * @apiSuccess {Number}   talks.data.slides   The total number of slides within the Talk.
+ * @apiSuccess {String}   talks.data.thumbnail   The talks cover slide thumbnail.
+ * @apiSuccess {Object[]}   talks.links   Array of hyperlinks related to the Talk.
+ * @apiSuccess {Object}   pagination    Pagination data.
+ * @apiSuccess {Number}   pagination.currentPage   The index of the current page.
+ * @apiSuccess {Number}   [pagination.nextPage]      The index of the next page.
+ * @apiSuccess {Number}   [pagination.previousPage]      The index of the next page.
+ * @apiSuccess {Object[]}   pagination.links       Array of hyperlinks related to the pagination.
+ *
+ * @apiError UserNotFound   The <code>id</code> of the User was not found.
+ **/
+
 "use strict";
 var speakerdeck = require('speakerdeck-scraper');
 
@@ -42,6 +78,7 @@ function decoratePagination(data) {
     }
 
     if(data.currentPage > 1) {
+        data.previousPage = data.currentPage - 1;
         links.push({ rel: 'previous', href: '/' + userId + '?page=' + (data.currentPage - 1) });
     }
 

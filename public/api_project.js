@@ -1,0 +1,1 @@
+define({  "name": "speakerdeck-api",  "version": "0.0.1",  "description": "Unofficial API to access speakerdeck.com user and talk data",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2015-06-24T21:21:31.514Z",    "url": "http://apidocjs.com",    "version": "0.13.1"  }});
