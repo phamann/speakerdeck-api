@@ -10,7 +10,7 @@
  * @apiParam {String} talk The Talk ID.
  *
  * @apiExample Example usage:
- * curl -i http://speakerdeck-api.herokuapps.com/patrickhamann/breaking-news-at-1000ms-velocity-eu-2014
+ * curl -i http://speakerdeck-api.herokuapp.com/patrickhamann/breaking-news-at-1000ms-velocity-eu-2014
  *
  * @apiSuccess {Object}   user          The User object.
  * @apiSuccess {String}   user.data.id   The Users id.

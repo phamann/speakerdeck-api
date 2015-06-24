@@ -10,7 +10,7 @@
  * @apiParam {Number} [page] The page to query.
  *
  * @apiExample Example usage:
- * curl -i http://speakerdeck-api.herokuapps.com/patrickhamann
+ * curl -i http://speakerdeck-api.herokuapp.com/patrickhamann
  *
  * @apiSuccess {Object}   user          The User object.
  * @apiSuccess {String}   user.data.id   The Users id.
