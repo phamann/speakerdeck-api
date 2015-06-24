@@ -24,6 +24,7 @@
     "cors": "^2.7.1",
     "express": "^4.13.0",
     "express-cache-controlfreak": "^0.1.2",
+    "forever": "^0.14.1",
     "speakerdeck-scraper": "^0.0.3"
   },
   "devDependencies": {
