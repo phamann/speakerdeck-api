@@ -21,7 +21,15 @@
   },
   "homepage": "https://github.com/phamann/speakerdeck-api",
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.0",
+    "express-cache-controlfreak": "^0.1.2",
     "speakerdeck-scraper": "^0.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-nodemon": "^2.0.3",
+    "jshint-stylish": "^2.0.1"
   }
 }
