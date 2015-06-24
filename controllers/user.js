@@ -58,7 +58,9 @@ function decoratePagination(data) {
 
 module.exports = function(req, res, next) {
 
-    speakerdeck.getUser(req.params.user).then(function(data){
+    var page = req.query.page || 1;
+
+    speakerdeck.getUser(req.params.user, page).then(function(data){
         data.user = decorateUser(data.user);
         data.talks = data.talks.map(decorateItem);
         decoratePagination(data);
